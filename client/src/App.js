@@ -17,14 +17,11 @@ const App = () => {
       {/* Routes added here - inside App div 
       *exact so that Movie List does not render on all movie pages*/}
       <Route exact path="/" component={MovieList} />
-      {/* [ x ] * Inside your App file add two routes.
-[ x ] * one route for `/` that loads the `MovieList` component.
-[ x ] * one route that will take an `id` parameter after`/movies/` (ex: `/movies/2`, `/movies/3` where the id is dynamic). This route should load the `Movie` component.*/}
-{/* */}
-      <Route
+      <Route path="/movie/:id" component={Movie} />
+      {/* <Route
         path="/movies/:id"
         render={props => <Movie {...props} />}
-      />
+      /> */}
     </div>
   );
 };
